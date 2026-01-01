@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Stan/CmdStan
+*.exe
+*.dll
+*.so
+*.dylib
+cmdstan/
+.stan_cache/
+
+# MCMC samples (large files)
+stan_fits/
+cmdstan_output/
+*.csv
+!requirements.txt
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.bcf
+*.run.xml
+
+# Data files (too large, require approval)
+Data/
+*.parquet
+*.csv
+!requirements.txt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*~
+

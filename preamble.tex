@@ -1,0 +1,52 @@
+% fonts
+
+\usepackage[T1]{fontenc}
+\usepackage[full]{textcomp}
+\usepackage{newtxtext}
+\usepackage{cabin} % sans serif
+\usepackage[varqu,varl]{inconsolata} % sans serif typewriter
+\usepackage[final,expansion=alltext]{microtype}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage[bigdelims,vvarbb]{newtxmath} % bb from STIX
+\usepackage[cal=boondoxo]{mathalfa} % mathcal
+
+% fix for amssymb conflict
+\let\Bbbk\relax
+
+% geometry of the page
+
+\usepackage[top=1in,
+            bottom=1in,
+            left=1in,
+            right=1in]{geometry}
+
+% paragraph spacing
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2ex plus 0.4ex minus 0.2ex}
+
+% line spacing
+\usepackage{setspace}
+
+% section spacing
+\usepackage{titlesec}
+\titleformat{\section}[hang]{\normalsize\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}[hang]{\small\bfseries}{\thesubsection.}{0.3em}{}
+\titlespacing*{\section}{0pt}{1.0ex plus 0.3ex minus 0.1ex}{0.5ex plus 0.1ex}
+\titlespacing*{\subsection}{0pt}{0.6ex plus 0.2ex minus 0.1ex}{0.3ex plus 0.05ex}
+
+% useful packages
+
+\usepackage[numbers]{natbib}
+\usepackage{epsfig}
+\usepackage{url}
+\usepackage{bm}
+\usepackage{blindtext}
+
+% caption settings
+\usepackage{caption}
+\captionsetup[figure]{font=footnotesize,labelfont=bf}
+
+% enumitem for better list formatting
+\usepackage{enumitem}
