@@ -13,7 +13,9 @@ Predicting internet addiction severity (0-3 scale) in 2,736 adolescents using hi
 - Actigraphy (wearable sensors): ENMO mean β = -0.31 (protective), ENMO SD β = 0.21 (risk)
 - Model performance: AUROC 0.747 (survey-only) → 0.749 (survey+actigraphy)
 
-**Why this matters**: Instead of chasing accuracy only, the project evaluates whether adding expensive wearable data is actually worth it — a realistic trade-off in applied data science. **Key insight**: Survey-only model achieves 99.7% of the performance with 0% of the hardware cost, making it more scalable for large-scale screening programs.
+**Why this matters**: Instead of chasing accuracy only, the project evaluates whether adding expensive wearable data is actually worth it — a realistic trade-off in applied data science. 
+
+**Key insight**: Survey-only model achieves 99.7% of the performance with 0% of the hardware cost, making it more scalable for large-scale screening programs.
 
 ## Tech Stack
 
