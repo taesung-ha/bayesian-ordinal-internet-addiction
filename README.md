@@ -29,6 +29,14 @@ Predicting internet addiction severity (0-3 scale) in 2,736 adolescents using hi
 - **Multi-modal data**: Survey data + actigraphy features from wearable sensors
 - **Robust to missingness**: MICE imputation + Bayesian inference handles 31-57% missingness
 
+### Data Overview
+
+![SII Distribution](figs/sii_distribution.png)
+*Distribution of internet addiction severity (SII, 0-3 scale). Right-skewed with mode at 0 (none/minimal).*
+
+![Correlation Matrix](figs/correlation_matrix.png)
+*Key variable correlations. Internet use hours shows strongest positive correlation with SII (r=0.18).*
+
 ## Project Structure
 
 ```
@@ -52,6 +60,18 @@ Predicting internet addiction severity (0-3 scale) in 2,736 adolescents using hi
 
 ## Results
 
+### Model Performance
+
+![ROC and Precision-Recall Curves](figs/roc_pr_curves.png)
+
+Model discrimination performance: Survey-only (blue) vs Survey+Actigraphy (purple). Minimal improvement (Δ AUROC = +0.002) suggests wearable data adds little value for the cost.
+
+### Coefficient Estimates
+
+![Posterior Credible Intervals](figs/posterior_credible_intervals_forest.png)
+
+95% credible intervals for all coefficients. Internet use shows strongest association; PAQ effects are weak/non-significant across age groups.
+
 | Predictor | Coefficient | 95% CI | Interpretation |
 |-----------|-------------|--------|----------------|
 | Internet use | 0.48 | [0.39, 0.57] | Strongest predictor |
@@ -59,7 +79,11 @@ Predicting internet addiction severity (0-3 scale) in 2,736 adolescents using hi
 | ENMO SD | 0.21 | [0.03, 0.41] | Risk factor (irregular activity → higher addiction) |
 | PAQ | -0.03 to -0.04 | CI includes 0 | Weak/non-significant |
 
-**Model comparison**: LOO-CV shows Model B marginally better (68% posterior probability), but discrimination improvement is minimal (Δ AUROC = +0.002). Actigraphy shows promise but limited by sample size (N=516, 13% of baseline).
+### Model Comparison
+
+![LOO-CV Comparison](figs/loo_elpd_comparison.png)
+
+LOO-CV shows Model B marginally better (68% posterior probability), but discrimination improvement is minimal (Δ AUROC = +0.002). Actigraphy shows promise but limited by sample size (N=516, 13% of baseline).
 
 **Business implications**:
 - **Survey-only model (Model A) is production-ready**: Achieves AUROC 0.747 with zero hardware cost, making it scalable for schools/clinics
